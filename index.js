@@ -76,12 +76,12 @@ function temperatureCtoF(celsius) {
  */
 function temperatureInF(temp, unit) {
   if (unit === "C") {
-    return Math.round(temp*9/5 + 32) + " F";
+    return Math.round((temp * 9) / 5 + 32) + "F";
   } else {
-    return `${temp}F`
-  };
+    return `${temp}F`;
+  }
+  temperatureCtoF(22);
 }
-
 
 /**
  * ### Challenge `makePersonObject`
@@ -100,12 +100,11 @@ function temperatureInF(temp, unit) {
  * }
  */
 
-
-function makePersonObject() {
+function makePersonObject(id, name, email) {
   const user = {
-    id: 5,
-    name: "Kyle",
-    email: "kdawg@yoloswag.com",
+    email: "luke@luke.com",
+    id: 1,
+    name: "Luke"
   };
   return user;
 }
@@ -227,10 +226,13 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
  */
+
+// Output a string of car make and car model
 function getCarInfoByIndex(inventory, index) {
-  console.log(index[4]);
+  return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`;
 }
 
+getCarInfoByIndex();
 /**
  * ### Challenge `getLastCarInfo`
  *
